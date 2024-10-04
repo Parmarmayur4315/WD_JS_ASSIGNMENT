@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-box {
+            height: 550px;
+            width: 600px;
+            border: 2px solid black;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .sub1 {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input {
+            width: 250px;
+        }
+
+        .result {
+            padding: 5px 322px;
+        }
+
+        button {
+            height: 40px;
+            width: 80px;
+        }
+
+        .answer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .answer input {
+            width: 190px;
+            border: 0;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box">
+        <h1>Marksheet for Inoformation Technology</h1>
+        <h2>Enter Marks</h2>
+        <form action="">
+            <div class="sub1">
+                <label for=""> 1.C language</label>
+                <input type="number" id="count1" value="1">
+            </div>
+            <div class="sub1">
+                <label for=""> 2.C++ language</label>
+                <input type="number" id="count2" value="1">
+            </div>
+            <div class="sub1">
+                <label for=""> 3.Databse</label>
+                <input type="number" id="count3" value="1">
+            </div>
+            <div class="sub1">
+                <label for=""> 4.HTML</label>
+                <input type="number" id="count4" value="1">
+            </div>
+            <div class="sub1">
+                <label for=""> 5.CSS</label>
+                <input type="number" id="count5" value="1">
+            </div>
+            <div class="sub1">
+                <label for=""> 6.php</label>
+                <input type="number" id="count6" value="1">
+            </div>
+            <div class="sub1">
+                <label for=""> 7.Core java</label>
+                <input type="number" id="count7" value="1">
+            </div>
+        </form>
+        <div class="result">
+            <button onclick="plus()">Result</button>
+        </div>
+        <div class="answer">
+            <input type="text" id="total">
+            <input type="text" id="percentage">
+
+        </div>
+</body>
+<script>
+    var count1 = document.getElementById("count1") 
+    var count2 = document.getElementById("count2")
+    var count3 = document.getElementById("count3")
+    var count4 = document.getElementById("count4")
+    var count5 = document.getElementById("count5")
+    var count6 = document.getElementById("count6")
+    var count7 = document.getElementById("count7")
+    var total = document.getElementById("total")
+     
+    var percentage = document.getElementById("percentage")
+     
+    function plus() {
+        var a = eval(count1.value)
+        var b = eval(count2.value)
+        var c = eval(count3.value)
+        var d = eval(count4.value)
+        var e = eval(count5.value)
+        var f = eval(count6.value)
+        var g = eval(count7.value)
+        var h = a + b + c + d + e + f + g;
+        total.value = "Total is :"+ h + "/350";
+
+        var I = (h / 350)*100;
+        percentage.value = "Percentage is:"+ I.toFixed(2) + "%";
+
+    }
+</script>
+</html>
